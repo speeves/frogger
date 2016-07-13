@@ -126,7 +126,7 @@ window.requestAnimationFrame = (function(){
         // 33⅓ milliseconds = 30 frames per second). Attempting to redraw too frequently
         // can cause the browser to slow down so choose this value carefully to maintain a
         // good balance between fluid animation and smooth playability
-        _refreshRate = 33.333,
+        _refreshRate = 0.333,
 
         // Define a variable to store the number of times the player's character has
         // reached the goal
