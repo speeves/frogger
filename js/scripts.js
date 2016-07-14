@@ -29,7 +29,8 @@ function modalOpen(offset) {
 
 function modalClose() {
   $('#game button.close').on('click', function(e) {
-      $('#game .game-wrapper').empty();
-      $('#game').removeClass('active');
+    location.reload();
+    // $('#game .game-wrapper').empty();
+    // $('#game').removeClass('active');
   });
 }
