@@ -2011,7 +2011,7 @@ Frogger.Row = (function() {
             // right at a rate of 5 pixels per each time the game loop is called to
             // render this row within the <canvas>
             new Frogger.Row.Log({
-                top: _gameBoard.rows[3],
+                top: _gameBoard.rows[9],
                 direction: Frogger.direction.RIGHT,
                 speed: 5,
 
@@ -2023,7 +2023,7 @@ Frogger.Row = (function() {
             // moving left (the default direction) at a rate of 6 pixels on each turn of the
             // game loop
             new Frogger.Row.Turtle({
-                top: _gameBoard.rows[4],
+                top: _gameBoard.rows[10],
                 speed: 6,
 
                 // Add four obstacles spaced out across the width of the game board
@@ -2033,7 +2033,7 @@ Frogger.Row = (function() {
             // Add a row of long-length logs to the 6th row on the game board, moving right
             // at a rate of 7 pixels on each turn of the game loop
             new Frogger.Row.Log({
-                top: _gameBoard.rows[5],
+                top: _gameBoard.rows[11],
                 direction: Frogger.direction.RIGHT,
                 speed: 7,
 
@@ -2044,7 +2044,7 @@ Frogger.Row = (function() {
             // Add a row of short-length logs to the 7th row of the game board, moving right
             // at a rate of 3 pixels each time the game loop is called
             new Frogger.Row.Log({
-                top: _gameBoard.rows[6],
+                top: _gameBoard.rows[12],
                 direction: Frogger.direction.RIGHT,
                 speed: 3,
 
@@ -2055,7 +2055,7 @@ Frogger.Row = (function() {
             // Add a row of turtles, grouped in threes, on the 8th row of the game board,
             // moving left at a rate of 5 pixels each time the game loop is called
             new Frogger.Row.Turtle({
-                top: _gameBoard.rows[7],
+                top: _gameBoard.rows[13],
                 speed: 5,
                 obstacles: [new Frogger.Image.ThreeTurtles(_gameBoard.columns[0]), new Frogger.Image.ThreeTurtles(_gameBoard.columns[3]), new Frogger.Image.ThreeTurtles(_gameBoard.columns[7]), new Frogger.Image.ThreeTurtles(_gameBoard.columns[10])]
             }),
@@ -2063,7 +2063,7 @@ Frogger.Row = (function() {
             // Add a set of truck-style vehicle obstacles to the 10th row of the game
             // board (the 9th row is considered a "safe" row that contains no obstacles)
             new Frogger.Row.Road({
-                top: _gameBoard.rows[9],
+                top: _gameBoard.rows[3],
                 speed: 3,
                 obstacles: [new Frogger.Image.Truck(_gameBoard.columns[1]), new Frogger.Image.Truck(_gameBoard.columns[7])]
             }),
@@ -2071,7 +2071,7 @@ Frogger.Row = (function() {
             // Add a set of turbo race car obstacles to the 11th row of the game board,
             // moving right at a fast rate
             new Frogger.Row.Road({
-                top: _gameBoard.rows[10],
+                top: _gameBoard.rows[4],
                 direction: Frogger.direction.RIGHT,
                 speed: 12,
                 obstacles: [new Frogger.Image.TurboRaceCar(_gameBoard.columns[1]), new Frogger.Image.TurboRaceCar(_gameBoard.columns[7])]
@@ -2079,14 +2079,14 @@ Frogger.Row = (function() {
 
             // Add a set of simple road car obstacles to the 12th row of the game board
             new Frogger.Row.Road({
-                top: _gameBoard.rows[11],
+                top: _gameBoard.rows[5],
                 speed: 4,
                 obstacles: [new Frogger.Image.RoadCar(_gameBoard.columns[1]), new Frogger.Image.RoadCar(_gameBoard.columns[7])]
             }),
 
             // Add a set of bulldozer-style obstacles to the 13th row of the game board
             new Frogger.Row.Road({
-                top: _gameBoard.rows[12],
+                top: _gameBoard.rows[6],
                 direction: Frogger.direction.RIGHT,
                 speed: 3,
                 obstacles: [new Frogger.Image.Bulldozer(_gameBoard.columns[1]), new Frogger.Image.Bulldozer(_gameBoard.columns[7])]
@@ -2095,7 +2095,7 @@ Frogger.Row = (function() {
             // Add a set of race car obstacles to the 14th row of the game board, which is
             // one row above where the player's character's starting position is
             new Frogger.Row.Road({
-                top: _gameBoard.rows[13],
+                top: _gameBoard.rows[7],
                 speed: 4,
                 obstacles: [new Frogger.Image.RaceCar(_gameBoard.columns[2]), new Frogger.Image.RaceCar(_gameBoard.columns[6])]
             })
