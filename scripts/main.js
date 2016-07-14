@@ -1,4 +1,5 @@
 // Define a namespace to contain the code for our game within a single global variable
+// Jan. 28th, Thursday, 7am-5pm
 var Frogger = (function() {
 
     // Locate the main <canvas> element on the page

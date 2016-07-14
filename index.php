@@ -42,7 +42,7 @@
 					<h3>Einstein's (SRWC)</h3>
 					<p>
 						<strong>In Store Now:</strong> <span id="srwcCur">C</span>
-						<br><strong>Avg. at <script>document.write(time);</script>:</strong> <span id="srwcAvg">290</span>
+						<!-- <br><strong>Avg. at <script>document.write(time);</script>:</strong> <span id="srwcAvg">290</span> -->
 					</p>
 					<img src="" id="srwcCurI" height="30">
 				</figcaption>
@@ -55,7 +55,7 @@
 					<h3>Starbucks</h3>
 					<p>
 						<strong>In Store Now:</strong> <span id="suCur">C</span>
-						<br><strong>Avg. at <script>document.write(time);</script>:</strong> <span id="suAvg">290</span>
+						<!-- <br><strong>Avg. at <script>document.write(time);</script>:</strong> <span id="suAvg">290</span> -->
 					</p>
 					<img src="" id="suCurI" height="30">
 				</figcaption>
@@ -68,7 +68,7 @@
 					<h3>Coffee Bean</h3>
 					<p>
 						<strong>In Store Now:</strong> <span id="llCur">C</span>
-						<br><strong>Avg. at <script>document.write(time);</script>:</strong> <span id="llAvg">290</span>
+						<!-- <br><strong>Avg. at <script>document.write(time);</script>:</strong> <span id="llAvg">290</span> -->
 					</p>
 					<img src="" id="llCurI" height="30">
 				</figcaption>
@@ -81,7 +81,7 @@
 					<h3>Einstein's (SEB)</h3>
 					<p>
 						<strong>In Store Now:</strong> <span id="sebCur">C</span>
-						<br><strong>Avg. at <script>document.write(time);</script>:</strong> <span id="sebAvg">290</span>
+						<!-- <br><strong>Avg. at <script>document.write(time);</script>:</strong> <span id="sebAvg">290</span> -->
 					</p>
 					<img src="" id="sebCurI" height="30">
 				</figcaption>
@@ -96,27 +96,6 @@
 			<div class="card chart">
 				<table>
 					<tr><td>Location</td><td>Average</td></tr>
-					<?php
-					// $mysqliDB = new mysqli("db01.online.unlv.edu", "root", "St326ark@","Hack-Data");
-					// $q1 = "SELECT location, COUNT( * ) AS total FROM `Hack-Data-Table2` WHERE dt > DATE_SUB( NOW( ) , INTERVAL 175 DAY )  AND dt < DATE_SUB( NOW( ) , INTERVAL 173 DAY )  GROUP BY location";
-					//
-					// $llb = 0;
-					// $seb = 0;
-					// $srwc = 0;
-					// $su = 0;
-					//
-					//
-					// if($r = $mysqliDB->query($q1)){
-					// 		while($o = $r->fetch_object()){
-					// 			//$o->location
-					// 			echo "<tr><td>".$o->location."</td><td>".$o->total."</td></tr>";
-					// 		}
-					// 	}else{
-					// 		echo'Query failed '.$q1;
-					// 		$mysqliDB->error;
-					// 	}
-
-					?>
 				</table>
 			</div>
 		</section>
@@ -135,5 +114,7 @@
 <script src="//cdn.jsdelivr.net/g/jquery@3.1.0(jquery.min.js)"></script>
 <script src="js/status.js"></script>
 <script src="js/scripts.js"></script>
+
+
 </body>
 </html>
