@@ -30,10 +30,15 @@ var interval=5000;
 var i=0;
 
 function generateData(iter){
-    // ll = Math.floor((Math.random() * 10) + 1);
-    // seb = Math.floor((Math.random() * 10) + 1);
-    // srwc = Math.floor((Math.random() * 10) + 1);
-    //   su = Math.floor((Math.random() * 10) + 1);
+    var currentTime = new Date(2016, 0, 28, $("#currentTime").text().split(":")[0], $("#currentTime").text().split(":")[1]);
+    var increment = new Date(currentTime.getTime() + 15*60000);
+    var hrs = String(increment.getHours());
+    var min = String(increment.getMinutes());
+    if (hrs > 11) { $("#ampm").text("pm"); }
+    if (hrs > 12) { hrs = hrs - 12; }
+    if (String(increment.getMinutes()) < 15 ) { min = "00"; }
+    $("#currentTime").text(hrs+":"+min);
+    
 
     ll = Math.floor(coffeebean[iter]);
     seb = Math.floor(einsteins_seb[iter]);
@@ -53,41 +58,41 @@ function generateData(iter){
     $('#srwcCur').html(srwc);
     $('#suCur').html(su);
 
-    if(ll<2){
+    if(ll<1){
 	$('#llCurI').attr("src", "images/happy.png");
-    }else if(ll<5){
+    }else if(ll<3){
 	$('#llCurI').attr("src", "images/sleepy.png");
-    }else if(ll<8){
+    }else if(ll<6){
 	$('#llCurI').attr("src", "images/egads.png");
     }else{
 	$('#llCurI').attr("src", "images/angry.png");;
     }
 
-    if(seb<2){
+    if(seb<1){
 	$('#sebCurI').attr("src", "images/happy.png");
-    }else if(seb<5){
+    }else if(seb<3){
 	$('#sebCurI').attr("src", "images/sleepy.png");
-    }else if(seb<8){
+    }else if(seb<6){
 	$('#sebCurI').attr("src", "images/egads.png");
     }else{
 	$('#sebCurI').attr("src", "images/angry.png");;
     }
 
-    if(srwc<2){
+    if(srwc<1){
 	$('#srwcCurI').attr("src", "images/happy.png");
-    }else if(srwc<5){
+    }else if(srwc<3){
 	$('#srwcCurI').attr("src", "images/sleepy.png");
-    }else if(srwc<8){
+    }else if(srwc<6){
 	$('#srwcCurI').attr("src", "images/egads.png");
     }else{
 	$('#srwcCurI').attr("src", "images/angry.png");;
     }
 
-    if(su<2){
+    if(su<1){
 	$('#suCurI').attr("src", "images/happy.png");
-    }else if(su<5){
+    }else if(su<3){
 	$('#suCurI').attr("src", "images/sleepy.png");
-    }else if(su<8){
+    }else if(su<6){
 	$('#suCurI').attr("src", "images/egads.png");
     }else{
 	$('#suCurI').attr("src", "images/angry.png");;
@@ -95,9 +100,9 @@ function generateData(iter){
 
     if(ll<1){
 	$('#llCur').addClass('empty');
-    }else if(ll<5){
+    }else if(ll<3){
 	$('#llCur').addClass('light');
-    }else if(ll<8){
+    }else if(ll<6){
 	$('#llCur').addClass('busy');
     }else{
 	$('#llCur').addClass('crazy');
@@ -105,9 +110,9 @@ function generateData(iter){
 
     if(seb<1){
 	$('#sebCur').addClass('empty');
-    }else if(seb<5){
+    }else if(seb<3){
 	$('#sebCur').addClass('light');
-    }else if(seb<8){
+    }else if(seb<6){
 	$('#sebCur').addClass('busy');
     }else{
 	$('#sebCur').addClass('crazy');
@@ -115,9 +120,9 @@ function generateData(iter){
 
     if(srwc<1){
 	$('#srwcCur').addClass('empty');
-    }else if(srwc<5){
+    }else if(srwc<3){
 	$('#srwcCur').addClass('light');
-    }else if(srwc<8){
+    }else if(srwc<6){
 	$('#srwcCur').addClass('busy');
     }else{
 	$('#srwcCur').addClass('crazy');
@@ -125,9 +130,9 @@ function generateData(iter){
 
     if(su<1){
 	$('#suCur').addClass('empty');
-    }else if(su<5){
+    }else if(su<3){
 	$('#suCur').addClass('light');
-    }else if(su<8){
+    }else if(su<6){
 	$('#suCur').addClass('busy');
     }else{
 	$('#suCur').addClass('crazy');
