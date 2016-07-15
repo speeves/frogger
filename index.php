@@ -29,7 +29,7 @@
 </head>
 <body>
 	<header>
-	  <h1>Hack Coffee <span id="clock"><span id="currentTime">11:30</span> <span id="ampm">am</span></span></h1>
+	  <h1>Hack Coffee <span id="clock"><span id="currentTime">6:45</span> <span id="ampm">am</span></span></h1>
 	  
 	</header>
 	<main>
