@@ -37,13 +37,25 @@ function generateData(iter){
     if (hrs > 11) { $("#ampm").text("pm"); }
     if (hrs > 12) { hrs = hrs - 12; }
     if (String(increment.getMinutes()) < 15 ) { min = "00"; }
-    $("#currentTime").text(hrs+":"+min);
-    
 
-    ll = Math.floor(coffeebean[iter]);
-    seb = Math.floor(einsteins_seb[iter]);
-    srwc = Math.floor(einsteins[iter]);
-    su = Math.floor(starbucks[iter]);
+
+    // data for current time
+    var d = new Date();
+    $("#currentTime").text(d.getHours() + ":" + (d.getMinutes() < 10 ? "0" + d.getMinutes() : d.getMinutes()));
+    if (d.getHours() < 7 || d.getHours() > 17) {
+      // if closed, projected people is 0 for all locations
+      ll = seb = srwc = su = "Store Closed"
+    } else {
+      // if open, get the number of minutes since opening (7am)...
+      var minutesSinceOpening = (((d.getHours() - 7) * 60) + d.getMinutes());
+      // ...divide by 15 minutes intervals...
+      var timeframe = Math.floor(minutesSinceOpening/15);
+      // ...get the historical average based on time interval and set variables
+      ll = Math.floor(coffeebean[timeframe]);
+      seb = Math.floor(einsteins_seb[timeframe]);
+      srwc = Math.floor(einsteins[timeframe]);
+      su = Math.floor(starbucks[timeframe]);
+    }
 
     //console.log(ll+" "+seb+" "+srwc+" "+su);
 

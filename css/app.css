@@ -45,12 +45,6 @@ button {
     }
 
     aside.game > section {
-      /*position: absolute;
-      top: 50%;
-      left: 50%;
-      -ms-transform: translate(-50%, -50%);
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);*/
     }
 
     aside.game > section .canvas {
@@ -58,8 +52,10 @@ button {
       top: 50%;
       left: 50%;
       border: 2px solid #000;
-			width: 480px;
-			height: 640px;
+			max-width: 720px;
+      max-height: 960px;
+      height: 100%;
+      width: auto
       -ms-transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);*/
