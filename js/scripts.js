@@ -21,9 +21,8 @@ function modalOpen(offset) {
     // get projected people for this location and this time interval
     window.blah.projectedPeople = $(this).find('span').text();
     // set speed offset for game based on projected people
-    // higher difficulty makes all cases easier
-    let difficulty = 7;
-    window.blah.speedOffset = window.blah.projectedPeople/difficulty;
+    let easiness = 7;
+    window.blah.speedOffset = window.blah.projectedPeople/easiness;
     // load game script
     let s = document.createElement("script");
     s.type = "text/javascript";

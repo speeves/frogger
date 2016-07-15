@@ -44,7 +44,7 @@ function generateData(iter){
     $("#currentTime").text(d.getHours() + ":" + (d.getMinutes() < 10 ? "0" + d.getMinutes() : d.getMinutes()));
     if (d.getHours() < 7 || d.getHours() > 17) {
       // if closed, projected people is 0 for all locations
-      ll = seb = srwc = su = 0
+      ll = seb = srwc = su = "Store Closed"
     } else {
       // if open, get the number of minutes since opening (7am)...
       var minutesSinceOpening = (((d.getHours() - 7) * 60) + d.getMinutes());

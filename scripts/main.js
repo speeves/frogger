@@ -868,7 +868,7 @@ Frogger.ImageSprite.prototype = {
 
         // Projected people in store
         Frogger.drawingSurface.fillStyle = "#FFF";
-        Frogger.drawingSurface.fillText("PEEPS", _gameBoard.columns[10], _gameBoard.grid.height / 2);
+        Frogger.drawingSurface.fillText("PEOPLE", _gameBoard.columns[10], _gameBoard.grid.height / 2);
 
         Frogger.drawingSurface.fillStyle = "#F00";
         Frogger.drawingSurface.fillText(window.blah.projectedPeople, _gameBoard.columns[10], _gameBoard.grid.height);

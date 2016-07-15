@@ -12,7 +12,6 @@
 		var currentdate = new Date();
 		var time = currentdate.getHours() + ":" + (currentdate.getMinutes() < 10 ? "0" : "") + currentdate.getMinutes();
 		window.blah = {}
-		// window.blah.speedOffset = 10;
 	</script>
 	<style>
 	@font-face {
@@ -30,20 +29,17 @@
 <body>
 	<header>
 	  <h1>Hack Coffee <span id="clock"><span id="currentTime">6:45</span> <span id="ampm">am</span></span></h1>
-
 	</header>
 	<main>
 		<section id="home" class="active">
 			<div class="card store">
 				<figure>
 					<img src="images/srwc.jpg">
-
 				</figure>
 				<figcaption>
 					<h3>Einstein's (SRWC)</h3>
 					<p>
 						<strong>Projected Now:</strong> <span id="srwcCur" class="projected-people">C</span>
-						<!-- <br><strong>Avg. at <script>document.write(time);</script>:</strong> <span id="srwcAvg">290</span> -->
 					</p>
 					<img src="" id="srwcCurI" height="30">
 				</figcaption>
@@ -56,7 +52,6 @@
 					<h3>Starbucks</h3>
 					<p>
 						<strong>Projected Now:</strong> <span id="suCur" class="projected-people">C</span>
-						<!-- <br><strong>Avg. at <script>document.write(time);</script>:</strong> <span id="suAvg">290</span> -->
 					</p>
 					<img src="" id="suCurI" height="30">
 				</figcaption>
@@ -69,7 +64,6 @@
 					<h3>Coffee Bean</h3>
 					<p>
 						<strong>Projected Now:</strong> <span id="llCur" class="projected-people">C</span>
-						<!-- <br><strong>Avg. at <script>document.write(time);</script>:</strong> <span id="llAvg">290</span> -->
 					</p>
 					<img src="" id="llCurI" height="30">
 				</figcaption>
@@ -82,7 +76,6 @@
 					<h3>Einstein's (SEB)</h3>
 					<p>
 						<strong>Projected Now:</strong> <span id="sebCur" class="projected-people">C</span>
-						<!-- <br><strong>Avg. at <script>document.write(time);</script>:</strong> <span id="sebAvg">290</span> -->
 					</p>
 					<img src="" id="sebCurI" height="30">
 				</figcaption>
@@ -117,7 +110,5 @@
 <script src="//cdn.jsdelivr.net/g/jquery@3.1.0(jquery.min.js)"></script>
 <script src="js/status.js"></script>
 <script src="js/scripts.js"></script>
-
-
 </body>
 </html>
