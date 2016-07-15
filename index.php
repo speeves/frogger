@@ -30,7 +30,7 @@
 <body>
 	<header>
 	  <h1>Hack Coffee <span id="clock"><span id="currentTime">6:45</span> <span id="ampm">am</span></span></h1>
-	  
+
 	</header>
 	<main>
 		<section id="home" class="active">
@@ -42,7 +42,7 @@
 				<figcaption>
 					<h3>Einstein's (SRWC)</h3>
 					<p>
-						<strong>In Store Now:</strong> <span id="srwcCur">C</span>
+						<strong>Projected Now:</strong> <span id="srwcCur" class="projected-people">C</span>
 						<!-- <br><strong>Avg. at <script>document.write(time);</script>:</strong> <span id="srwcAvg">290</span> -->
 					</p>
 					<img src="" id="srwcCurI" height="30">
@@ -55,7 +55,7 @@
 				<figcaption>
 					<h3>Starbucks</h3>
 					<p>
-						<strong>In Store Now:</strong> <span id="suCur">C</span>
+						<strong>Projected Now:</strong> <span id="suCur" class="projected-people">C</span>
 						<!-- <br><strong>Avg. at <script>document.write(time);</script>:</strong> <span id="suAvg">290</span> -->
 					</p>
 					<img src="" id="suCurI" height="30">
@@ -68,7 +68,7 @@
 				<figcaption>
 					<h3>Coffee Bean</h3>
 					<p>
-						<strong>In Store Now:</strong> <span id="llCur">C</span>
+						<strong>Projected Now:</strong> <span id="llCur" class="projected-people">C</span>
 						<!-- <br><strong>Avg. at <script>document.write(time);</script>:</strong> <span id="llAvg">290</span> -->
 					</p>
 					<img src="" id="llCurI" height="30">
@@ -81,7 +81,7 @@
 				<figcaption>
 					<h3>Einstein's (SEB)</h3>
 					<p>
-						<strong>In Store Now:</strong> <span id="sebCur">C</span>
+						<strong>Projected Now:</strong> <span id="sebCur" class="projected-people">C</span>
 						<!-- <br><strong>Avg. at <script>document.write(time);</script>:</strong> <span id="sebAvg">290</span> -->
 					</p>
 					<img src="" id="sebCurI" height="30">
@@ -104,6 +104,8 @@
 	<aside id="game" class="game">
 		<button class="close">Close</button>
 		<section class="game-wrapper">
+			<canvas id="background-canvas" class="canvas" width="960" height="1280"></canvas>
+			<canvas id="canvas" class="canvas" width="960" height="1280"></canvas>
 		</section>
 	</aside>
 	<footer id="tabs" class="clearfix">

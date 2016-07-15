@@ -848,22 +848,30 @@ Frogger.ImageSprite.prototype = {
         // Write the text "1-UP", right-aligned to the 4th column position and ending half
         // a row down from the top of the game board in white (hex color value #FFF)
         Frogger.drawingSurface.fillStyle = "#FFF";
-        Frogger.drawingSurface.fillText("1-UP", _gameBoard.columns[3], _gameBoard.grid.height / 2);
+        Frogger.drawingSurface.fillText("1-UP", _gameBoard.columns[2], _gameBoard.grid.height / 2);
 
         // Write out the current score in red (hex color value #F00) right-aligned beneath
         // the "1-UP" text previously drawn to the <canvas>
         Frogger.drawingSurface.fillStyle = "#F00";
-        Frogger.drawingSurface.fillText(_score, _gameBoard.columns[3], _gameBoard.grid.height);
+        Frogger.drawingSurface.fillText(_score, _gameBoard.columns[2], _gameBoard.grid.height);
 
         // Write the text "HI-SCORE", right-aligned to the 8th column position and ending
         // half a row down from the top of the game board in white (hex color value #FFF)
         Frogger.drawingSurface.fillStyle = "#FFF";
-        Frogger.drawingSurface.fillText("HI-SCORE", _gameBoard.columns[8], _gameBoard.grid.height / 2);
+        Frogger.drawingSurface.fillText("HI-SCORE", _gameBoard.columns[6], _gameBoard.grid.height / 2);
 
         // Write out the current high score in red (hex color value #F00) right-aligned
         // beneath the "HI-SCORE" text previously drawn to the <canvas>
         Frogger.drawingSurface.fillStyle = "#F00";
-        Frogger.drawingSurface.fillText(_highScore, _gameBoard.columns[8], _gameBoard.grid.height);
+        Frogger.drawingSurface.fillText(_highScore, _gameBoard.columns[6], _gameBoard.grid.height);
+
+
+        // Projected people in store
+        Frogger.drawingSurface.fillStyle = "#FFF";
+        Frogger.drawingSurface.fillText("PEEPS", _gameBoard.columns[10], _gameBoard.grid.height / 2);
+
+        Frogger.drawingSurface.fillStyle = "#F00";
+        Frogger.drawingSurface.fillText(window.blah.projectedPeople, _gameBoard.columns[10], _gameBoard.grid.height);
     }
 
     // Define a function to render the text "GAME OVER" to the <canvas>. This will only be

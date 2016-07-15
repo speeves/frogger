@@ -37,13 +37,18 @@ function generateData(iter){
     if (hrs > 11) { $("#ampm").text("pm"); }
     if (hrs > 12) { hrs = hrs - 12; }
     if (String(increment.getMinutes()) < 15 ) { min = "00"; }
-    $("#currentTime").text(hrs+":"+min);
-    
 
-    ll = Math.floor(coffeebean[iter]);
-    seb = Math.floor(einsteins_seb[iter]);
-    srwc = Math.floor(einsteins[iter]);
-    su = Math.floor(starbucks[iter]);
+
+    // data for current time
+    var d = new Date();
+    var minutesSinceOpening = (((d.getHours() - 7) * 60) + d.getMinutes());
+    var timeframe = Math.floor(minutesSinceOpening/15);
+    $("#currentTime").text(d.getHours() + ":" + (d.getMinutes() < 10 ? "0" + d.getMinutes() : d.getMinutes()));
+
+    ll = Math.floor(coffeebean[timeframe]);
+    seb = Math.floor(einsteins_seb[timeframe]);
+    srwc = Math.floor(einsteins[timeframe]);
+    su = Math.floor(starbucks[timeframe]);
 
     //console.log(ll+" "+seb+" "+srwc+" "+su);
 
